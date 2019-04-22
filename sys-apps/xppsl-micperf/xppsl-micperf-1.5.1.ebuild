@@ -16,12 +16,12 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="sci-libs/mkl
-		 sys-libs/xppsl-memkind
-	 sys-apps/dmidecode
-	 ${PYTHON_DEPS}"
-DEPEND="${RDEPEND}
-	>=dev-libs/intel-common-16.0[mpi]
-		dev-lang/icc"
+		sys-libs/xppsl-memkind
+		sys-apps/dmidecode
+		>=dev-libs/intel-common-17.8[mpi]
+		dev-lang/icc
+		${PYTHON_DEPS}"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}

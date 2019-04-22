@@ -19,7 +19,7 @@ If the installation of _layman_ was successfully completed, then you are ready
 to sync the content of this repository:
 
 ```
-layman -o https://raw.githubusercontent.com/abusse/xeon-phi-overlay/master/master/repositories.xml -f -a xeon-phi
+layman -o https://raw.githubusercontent.com/agravgaard/xeon-phi-overlay/master/master/repositories.xml -f -a xeon-phi
 ```
 
 If you use [eix](https://wiki.gentoo.org/wiki/Eix) you may need to execute:
@@ -27,12 +27,8 @@ If you use [eix](https://wiki.gentoo.org/wiki/Eix) you may need to execute:
 ```
 eix-update
 ```
-
-Few of the ebuilds of this overlay require the Intel C++ compiler (ICC). Even though it is part of the official Portage repository, a more recent version is available in the [Science](https://wiki.gentoo.org/wiki/Project:Science/Overlay). Installing this overlay is therefore highly recommended:
-
-```
-layman -a science
-```
+The Intel C++ Compiler does not support the Xeon Phi x100 series as of version 2018, so we'll use 2017.8
+You'll need to download the professional edition from registrationcenter.intel.com
 
 ## Installing the Xeon Phi Processor Software for Linux (XPPSL)
 
